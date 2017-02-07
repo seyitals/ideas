@@ -7,11 +7,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/',
       controller: 'homeController'
-      templateUrl: 'home.html'
+      templateUrl: '/partials/home.html'
     })
     .state('idea', {
       url: '/idea',
       controller: 'ideaController'
-      templateUrl: 'idea.html'
+      templateUrl: '/partials/idea.html'
     });
 });
