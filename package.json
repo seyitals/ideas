@@ -1,0 +1,23 @@
+{
+  "name": "test-ideas",
+  "version": "1.0.0",
+  "description": "test app for managing ideas",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Oluwaseyi Talabi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
+    "should": "^11.2.0"
+  }
+}
