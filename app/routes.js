@@ -1,10 +1,6 @@
 var Ideas = require('./model');
 
 module.exports = function(app) {
-  // app.get('*', function(req, res) {
-  //   res.sendfile('./public/index.html');
-  // });
-
   app.get('/', function(req, res) {
     Ideas.find(function(err, ideas) {
       if (err)
