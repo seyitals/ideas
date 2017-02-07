@@ -2,11 +2,10 @@ var express = require('express'),
   app = express(),
   mongoose = require('mongoose'),
   bodyParser = require('body-parser'),
-  methodOverride = require('method-override')
-  config = require('./config');
+  methodOverride = require('method-override'),
+  db = require('./config/database');
 
-mongoose.connect(config.DBHost);
-db.on('error', console.log)
+mongoose.connect(db.database);
 
 app.use(express.static(__dirname + 'public'));
 app.use(bodyParser.json());
@@ -17,3 +16,5 @@ require('./app/routes')(app);
 
 app.listen(8080);
 console.log('assessment happens on port 8080');
+
+module.exports = app;

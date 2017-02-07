@@ -2,7 +2,7 @@ var Ideas = require('./model');
 
 module.exports = function(app) {
   app.get('*', function(req, res) {
-    res.sendFile(path.join( __dirname, './public/index.html'));
+    res.sendfile('./public/index.html');
   });
 
   app.get('/', function(req, res) {
