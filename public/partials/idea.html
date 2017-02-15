@@ -1,0 +1,23 @@
+<div>
+  <h3>{{idea.name}}</h1>
+  <p>{{idea.kind}}</p>
+
+  <button ng-click="showEditForm()" ng-show="!editIdea" class="btn btn-primary">Edit Idea</button>
+</div>
+
+<div ng-show="editIdea">
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="enter name" ng-model="editFormData.name">
+    </div>
+    <div class="form-group">
+      <label for="kind">Kind:</label>
+      <select class="form-control" id="kind" ng-model="editFormData.kind">
+        <option>personal</option>
+        <option>work</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="save()">Update</button>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+<div>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="enter name" ng-model="formData.name">
+    </div>
+    <div class="form-group">
+      <label for="kind">Kind:</label>
+      <select class="form-control" id="kind" ng-model="formData.kind">
+        <option>personal</option>
+        <option>work</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="createIdea()">Create Idea</button>
+  </form>
+
+ <h3>All Ideas</h1>
+
+  <div ng-repeat="idea in ideas">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-2">
+          <a ui-sref="idea({id: idea._id})">{{idea.name}}</a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-1">
+          <button type="submit" class="btn btn-xs btn-default" ng-click="deleteIdea(idea._id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
