@@ -17,7 +17,7 @@ describe('Ideas', function() {
   describe('/GET ideas', function() {
     it('it should get all ideas', function(done) {
       chai.request(server)
-      .get('/')
+      .get('/api')
       .end(function(err, res) {
         res.statusCode.should.be.eql(200);
         res.body.length.should.be.eql(0);
@@ -34,11 +34,11 @@ describe('Ideas', function() {
       };
 
       chai.request(server)
-      .post('/ideas')
+      .post('/api/ideas')
       .send(myIdea)
       .end(function(err, res) {
         res.statusCode.should.be.eql(200);
-        res.body.data.length.should.be.eql(0);
+        res.body.data.length.should.be.eql(1);
         done();
       });
     });
